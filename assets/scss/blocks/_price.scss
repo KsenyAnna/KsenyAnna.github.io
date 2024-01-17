@@ -1,0 +1,78 @@
+.price {
+  position: relative;
+  width: fit-content;
+
+  &__new-price {
+    @include text;
+    font-size: rem($font-size-medium);
+    font-weight: $font-weight-large;
+    letter-spacing: rem(0.36px);
+
+    @media #{$screen-desktop} {
+      font-size: rem($font-size-large);
+      letter-spacing: rem(0.4px);
+    }
+  }
+
+  &__discount {
+    @include text;
+    font-size: rem(8px);
+    font-weight: $font-weight-medium;
+    letter-spacing: rem(0.08px);
+
+    position: absolute;
+    top: rem(33px);
+    right: rem(-45px);
+
+    padding: rem(2.5px) rem(8.5px);
+
+    background-color: $hot-pink;
+    border-radius: rem($border-radius-large);
+
+    @media #{$screen-desktop} {
+      font-size: rem(10px);
+      letter-spacing: rem(0.1px);
+
+      top: rem(30px);
+      right: rem(-57px);
+
+      padding: rem(3px) rem(10.5px);
+    }
+  }
+
+  &__old-price {
+    @include text;
+    font-size: rem($font-size-tiny);
+    font-weight: $font-weight-large;
+    letter-spacing: rem(0.18px);
+
+    position: absolute;
+    bottom: rem(-25px);
+    right: rem(-13px);
+
+    @media #{$screen-desktop} {
+      font-size: rem($font-size-small);
+      letter-spacing: rem(0.2px);
+
+      bottom: rem(-24px);
+      right: rem(-27px);
+    }
+
+    &-text {
+      position: relative;
+
+      padding: 0 rem(3px);
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: $hot-pink;
+        width: 100%;
+        height: rem(1px);
+
+        left: 0;
+        top: 50%;
+      }
+    }
+  }
+}

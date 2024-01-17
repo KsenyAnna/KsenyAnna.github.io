@@ -1,0 +1,95 @@
+/**
+* Colors
+*
+* Название переменной конкретного цвета генерируется через сервис: http://chir.ag/projects/name-that-color/.
+* Значение цвета всегда указывается в HEX-формате в нижнем регистре (кроме исключительных случаев).
+*/
+$white: #ffffff;
+$black: #000000;
+
+$heliotrope: #c05aff;
+$gorse: #fffd50;
+$hot-pink: #ff50ba;
+$green-yellow: #c9ff50;
+
+$color-text: $black;
+$color-text-inverse: $white;
+$background: $white;
+$background-color: $heliotrope;
+$background-color-inverse: $hot-pink;
+
+/**
+* Fonts
+*/
+$font-path: '/public/fonts';
+$font-family-default: sans-serif;
+$font-family-custom: 'Mulish';
+
+$font-family: $font-family-custom, $font-family-default;
+
+$font-size-mini: 12px;
+$font-size-miniature: 14px;
+$font-size-tiny: 18px;
+$font-size-small: 20px;
+$font-size-average: 24px;
+$font-size-middle: 32px;
+$font-size-medium: 36px;
+$font-size-large: 40px;
+$font-size-huge: 48px;
+
+$font-size-base: $font-size-tiny;
+
+$font-weight-regular: 500;
+$font-weight-medium: 700;
+$font-weight-large: 800;
+
+$font-weight-base: $font-weight-regular;
+
+$line-height-percent-large: 150%;
+$line-height-percent-medium: 120%;
+
+$line-height-base: $line-height-percent-medium;
+
+/**
+* Breakpoints
+*/
+$screen-desktop: '(min-width: 1440px)';
+
+/**
+* Layout
+*/
+$weight-container: 1200px;
+$gap-container: 14px;
+
+/**
+* Sizes
+*/
+$height-header-desktop: 139px;
+$height-header-mobile: 93px;
+
+/**
+* Transitions and Animations
+*/
+$transition-duration-fast: 100ms;
+$transition-duration: 300ms;
+$transition-function: ease-in-out;
+
+/**
+* Radius
+*/
+$border-radius-mini: 2px;
+$border-radius-small: 30px;
+$border-radius-medium: 60px;
+$border-radius-big: 100px;
+$border-radius-large: 199px;
+
+/**
+* Box-shadows
+*/
+
+/**
+* Z-indexes
+*/
+
+$z-index-header: 50;
+$z-index-aside-substrate: 10;

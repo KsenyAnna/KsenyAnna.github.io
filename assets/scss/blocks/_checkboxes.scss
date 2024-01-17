@@ -1,0 +1,8 @@
+.checkboxes {
+  &__item {
+    height: 100%;
+    &:not(:last-child) {
+      margin-bottom: rem(11px);
+    }
+  }
+}

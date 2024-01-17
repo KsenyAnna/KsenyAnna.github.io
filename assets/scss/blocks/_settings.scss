@@ -1,0 +1,88 @@
+.settings {
+  display: flex;
+  column-gap: rem(6px);
+
+  margin-bottom: rem(33px);
+
+  @media #{$screen-desktop} {
+    flex-direction: column;
+  }
+
+  &__language {
+    @include rounded;
+    $padding-size: 44.5px;
+    $padding-big-size: 44.5px;
+
+    display: flex;
+    align-items: center;
+    column-gap: rem(17px);
+
+    padding-left: rem($padding-size);
+    padding-right: rem($padding-size);
+
+    @media #{$screen-desktop} {
+      padding-left: rem($padding-big-size);
+      padding-right: rem($padding-big-size);
+
+      margin-bottom: rem(76px);
+    }
+
+    &-text {
+      @include text;
+      color: $color-text-inverse;
+      font-size: rem(14px);
+      font-weight: $font-weight-medium;
+      letter-spacing: rem(0.14px);
+
+      @media #{$screen-desktop} {
+        @include text;
+        font-weight: $font-weight-medium;
+      }
+    }
+
+    &-icon {
+      width: rem(12px);
+      height: rem(6px);
+
+      color: $color-text-inverse;
+
+      @media #{$screen-desktop} {
+        width: rem(15px);
+        height: rem(7.5px);
+      }
+    }
+  }
+  
+  &__properties {
+    width: fit-content;
+
+    @media #{$screen-desktop} {
+      width: 100%;
+    }
+
+    &-img {
+      @include rounded;
+
+      padding: rem(12.5px);
+
+      @media #{$screen-desktop} {
+        display: none;
+
+        padding: rem(12.5px);
+      }
+    }
+
+    &-icon {
+      width: rem(21px);
+      height: rem(21px);
+    }
+
+    &-list {
+      display: none;
+
+      @media #{$screen-desktop} {
+        display: block;
+      }
+    }
+  }
+}

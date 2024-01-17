@@ -1,0 +1,44 @@
+.checkbox {
+  &__input {
+    @include hidden-element;
+  }
+
+  &__input:checked + &__label & {
+    &__icon {
+      background-color: $heliotrope;
+    }
+  }
+
+  &__label {
+    @include text;
+
+    display: inline-flex;
+    align-items: center;
+
+    cursor: pointer;
+  }
+
+  &__icon {
+    $size: 18px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+
+    width: rem($size);
+    height: rem($size);
+    margin-right: rem(12px);
+
+    transition: color $transition-duration $transition-function,
+      border-color $transition-duration $transition-function,
+      background-color $transition-duration $transition-function;
+
+    color: transparent;
+    border: rem(1px) solid $heliotrope;
+    border-radius: rem($border-radius-mini);
+    background-color: $white;
+  }
+}

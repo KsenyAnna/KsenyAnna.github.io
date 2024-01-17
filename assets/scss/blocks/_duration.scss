@@ -1,0 +1,45 @@
+.duration {
+  &__text {
+    @include text;
+
+    margin-bottom: rem(16.5px);
+  }
+
+  &__range {
+    $size-circle: 14px;
+
+    position: relative;
+
+    width: rem(189px);
+    height: rem(1px);
+    margin-bottom: rem(6.5px);
+
+    background-color: $heliotrope;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: rem($size-circle);
+      height: rem($size-circle);
+
+      left: 0;
+      top: rem(-7px);
+
+      border-radius: rem(50px);
+      background-color: $heliotrope;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: rem($size-circle);
+      height: rem($size-circle);
+
+      right: 0;
+      top: rem(-7px);
+
+      border-radius: rem(50px);
+      background-color: $heliotrope;
+    }
+  }
+}

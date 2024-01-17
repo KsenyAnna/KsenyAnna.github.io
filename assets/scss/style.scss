@@ -1,0 +1,39 @@
+/**
+* Vendors
+*/
+@import '~normalize.css';
+
+/**
+* Abstracts
+*/
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+/**
+* Base
+*/
+@import 'base/fonts';
+@import 'base/generic';
+
+/*
+* Components
+*/
+@import 'blocks/header';
+@import 'blocks/container';
+@import 'blocks/page';
+@import 'blocks/icon';
+@import 'blocks/info';
+@import 'blocks/main-page';
+@import 'blocks/header-logo';
+@import 'blocks/settings';
+@import 'blocks/properties-list';
+@import 'blocks/checkbox';
+@import 'blocks/checkboxes';
+@import 'blocks/duration';
+@import 'blocks/radiobutton';
+@import 'blocks/radiobuttons';
+@import 'blocks/footer';
+@import 'blocks/card';
+@import 'blocks/cards';
+@import 'blocks/price';

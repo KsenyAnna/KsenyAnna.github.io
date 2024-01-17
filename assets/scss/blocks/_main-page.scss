@@ -1,0 +1,67 @@
+.main-page {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  @media #{$screen-desktop} {
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: rem(60px);
+  }
+
+  &__settings {
+    @media #{$screen-desktop} {
+      width: rem(280px);
+    }
+  }
+
+  &__content {
+    @media #{$screen-desktop} {
+      width: rem(860px);
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(6px);
+
+    margin-bottom: rem(52px);
+
+    @media #{$screen-desktop} {
+      flex-direction: row;
+      align-items: center;
+
+      margin-bottom: rem(59px);
+    }
+
+    &-text {
+      @include text;
+      font-size: rem(32px);
+      font-weight: $font-weight-large;
+      letter-spacing: rem(0.32px);
+
+      display: flex;
+      align-items: center;
+
+      @media #{$screen-desktop} {
+        min-height: rem(79px);
+
+        font-size: rem(48px);
+        font-weight: $font-weight-large;
+        letter-spacing: rem(0.48px);
+      }
+
+      &--selected {
+        width: fit-content;
+        background-color: $green-yellow;
+        border-radius: rem(100px);
+        padding: rem(9.5px) rem(19px);
+
+        @media #{$screen-desktop} {
+          padding: 0 rem(13px);
+        }
+      }
+    }
+  }
+}

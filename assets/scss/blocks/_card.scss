@@ -1,0 +1,208 @@
+.card {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: rem(303px);
+
+  border-radius: rem($border-radius-small);
+
+  cursor: pointer;
+
+  padding: rem(24px) rem(28px) rem(11px) rem(22px);
+
+  background-color: $background-color;
+  color: $color-text-inverse;
+
+  @media #{$screen-desktop} {
+    height: rem(341px);
+
+    padding: rem(24px) rem(25px) rem(12px) rem(22px);
+  }
+
+  &__link {
+    @include link;
+  }
+
+  &__background {
+    position: absolute;
+
+    &--az {
+      width: rem(212px);
+      height: rem(174px);
+      left: percentage(0.35);
+      top: 0;
+
+      @media #{$screen-desktop} {
+        width: rem(272px);
+        height: rem(223px);
+
+        left: percentage(0.275);
+        right: rem(13px);
+      }
+    }
+    &--ae {
+      width: rem(183px);
+      height: rem(156px);
+
+      left: percentage(0.505);
+      top: percentage(0.1847);
+
+      @media #{$screen-desktop} {
+        width: rem(183px);
+        height: rem(156px);
+      }
+    }
+
+    &-girl {
+      position: absolute;
+      width: rem(187px);
+      height: rem(223px);
+      left: 0;
+      bottom: 0;
+
+      @media #{$screen-desktop} {
+        width: rem(213px);
+        height: rem(255px);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(33px);
+
+    z-index: $z-index-aside-substrate;
+
+    @media #{$screen-desktop} {
+      margin-bottom: rem(19px);
+    }
+
+    &-text {
+      @include text;
+      font-weight: $font-weight-large;
+
+      @media #{$screen-desktop} {
+        font-size: rem($font-size-average);
+        letter-spacing: rem(0.24px);
+      }
+
+      &--yellow {
+        color: $gorse;
+      }
+    }
+  }
+
+  &__name {
+    @include text;
+    color: $color-text;
+    font-size: rem($font-size-mini);
+    font-weight: $font-weight-medium;
+    line-height: $line-height-percent-large;
+    letter-spacing: rem(0.12px);
+    text-align: center;
+
+    position: relative;
+    width: fit-content;
+
+    background-color: $green-yellow;
+    border-radius: rem($border-radius-medium);
+
+    margin-left: rem(124px);
+    padding: rem(6px) rem(24px);
+    margin-bottom: rem(15.5px);
+
+    @media #{$screen-desktop} {
+      margin-left: rem(126px);
+      padding: rem(6px) rem(18px) rem(7px);
+      margin-bottom: rem(50px);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: url('/public/images/piece-of-name.svg') 0 0 no-repeat;
+      width: rem(18px);
+      height: rem(17px);
+
+      left: rem(-11px);
+      bottom: rem(-15px);
+
+      @media #{$screen-desktop} {
+        width: rem(20px);
+        height: rem(21px);
+
+        left: rem(-12px);
+        bottom: rem(-19px);
+      }
+    }
+  }
+
+  &__price {
+    margin-left: percentage(0.44);
+    margin-bottom: rem(29px);
+
+    @media #{$screen-desktop} {
+      margin-left: rem(174px);
+      margin-bottom: rem(8px);
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-left: percentage(0.3);
+
+    @media #{$screen-desktop} {
+      margin-left: percentage(0.36);
+    }
+    &-icon {
+      $size: 66px;
+
+      width: rem(51px);
+      height: rem(51px);
+
+      overflow: hidden;
+      z-index: $z-index-aside-substrate;
+
+      @media #{$screen-desktop} {
+        width: rem($size);
+        height: rem($size);
+      }
+    }
+  }
+
+  &__more-details {
+    $size: 17px;
+
+    display: flex;
+    align-items: center;
+    column-gap: rem(7px);
+
+    padding-top: rem(9px);
+
+    @media #{$screen-desktop} {
+      column-gap: rem(3px);
+
+      padding-top: rem(14px);
+    }
+
+    &-text {
+      @include text;
+      font-size: rem($font-size-miniature);
+      letter-spacing: rem(0.14px);
+      @media #{$screen-desktop} {
+        @include text;
+      }
+    }
+
+    &-icon {
+      width: rem($size);
+      height: rem($size);
+    }
+  }
+}

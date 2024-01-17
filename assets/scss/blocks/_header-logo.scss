@@ -1,0 +1,19 @@
+.header-logo {
+  &__pic {
+    width: rem(131px);
+    height: rem(27px);
+    overflow: hidden;
+
+    color: $heliotrope;
+
+    @media #{$screen-desktop} {
+      width: rem(223px);
+      height: rem(43px);
+    }
+
+    &:hover {
+      transition: $transition-duration $transition-function;
+      color: $hot-pink;
+    }
+  }
+}

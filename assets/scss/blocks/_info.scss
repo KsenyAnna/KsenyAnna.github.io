@@ -1,0 +1,119 @@
+.info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: rem(18px);
+
+  @media #{$screen-desktop} {
+    column-gap: rem(21px);
+  }
+
+  &__search {
+    $size: 31px;
+
+    display: none;
+
+    &:hover {
+      transition: $transition-duration $transition-function;
+      cursor: pointer;
+    }
+
+    @media #{$screen-desktop} {
+      display: block;
+    }
+
+    &-icon {
+      width: rem($size);
+      height: rem($size);
+      color: $heliotrope;
+    }
+  }
+
+  &__profile {
+    $size: 31px;
+
+    width: rem(33px);
+    height: rem(33px);
+
+    &:hover {
+      transition: $transition-duration $transition-function;
+      cursor: pointer;
+    }
+
+    @media #{$screen-desktop} {
+      width: rem($size);
+      height: rem($size);
+    }
+  }
+
+  &__language {
+    display: none;
+
+    &:hover {
+      transition: $transition-duration $transition-function;
+      cursor: pointer;
+    }
+
+    @media #{$screen-desktop} {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: rem(5px);
+    }
+
+    &-text {
+      @include text;
+      font-weight: $font-weight-medium;
+    }
+
+    &-icon {
+      color: $black;
+
+      width: rem(15px);
+      height: rem(7.5px);
+    }
+  }
+
+  &__menu {
+    @media #{$screen-desktop} {
+      order: -1;
+
+      margin-right: rem(40px);
+    }
+
+    &-icon {
+      display: block;
+
+      width: rem(37px);
+      height: rem(20px);
+
+      color: $heliotrope;
+
+      @media #{$screen-desktop} {
+        display: none;
+      }
+    }
+    &-list {
+      display: none;
+
+      @media #{$screen-desktop} {
+        display: block;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    column-gap: rem(71px);
+  }
+
+  &__item {
+    @include text;
+
+    &:hover {
+      transition: $transition-duration $transition-function;
+      color: $heliotrope;
+      cursor: pointer;
+    }
+  }
+}
